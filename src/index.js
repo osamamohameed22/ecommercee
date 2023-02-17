@@ -12,6 +12,10 @@ $(document).ready(function(){
         alert('اضف المنتج الي عربه الشراء');
     });
     $('#copyright').text('جميع الحقوق محفوظه سنه' + new Date().getFullYear());
+    $('.product-option input[type="radio"]').change(function(){
+        $(this).parents('.product-option').siblings().removeClass('active');
+        $(this).parents('.product-option').addClass('active');
+    });
 
 });
 
